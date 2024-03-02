@@ -27,6 +27,7 @@ html,body{
     z-index: 1;
     padding: 0 3rem;
     padding-right: 3.2rem;
+    align-items:center;
     
 }
 img[alt="girl2"]{
