@@ -16,6 +16,9 @@ html,body{
     margin-left:10px;
 
 }
+.home-toggle{
+    color:rgb(220, 109, 170);
+}
 .header{
     box-sizing: border-box;
     position: fixed;
