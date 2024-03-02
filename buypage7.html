@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Product-7</title>
+        <!-- <link rel="stylesheet" href="./style2.css"> -->
+        <style>
+            *{
+                margin: 0;
+                padding:0;
+                /* background-color: #111; */
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            .nav-el{
+    transition: all 0.3s;
+}
+h3{
+    font-size:1.3rem;
+}
+img{
+    height:90%;
+    width:60%;
+}
+
+.container-1{
+    display:flex;
+    justify-content: space-between;
+    padding-left:10px;
+    padding-right:40px;
+    align-items: center;
+}
+footer{
+    height:20vh;
+    display:none;
+}
+.navbar{
+    display:flex;
+    gap:1.8rem;
+    justify-content: space-evenly;
+    color:white;
+    font-size:1rem;
+}
+.hamburger-menu{
+    display:none;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color:rgb(220, 109, 170);
+}
+.header{
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    background-color: #111;
+    z-index: 1;
+    padding: 0 3rem;
+    padding-right: 3.2rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    
+}
+header{
+    width:100%;
+    min-height:100%;
+}
+.container{
+    height:800px;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    align-items:center;
+
+}
+.left-container{
+    flex-basis:50%;
+    height:500px;
+    width:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+
+}
+h1{
+    text-align: center;
+}
+button{
+    outline: none;
+    border:none;
+    padding: 0.6rem 1rem;
+    position:relative;
+    width:10rem;
+    /* left:1rem; */
+    margin-left:1rem;
+    font-weight:bold;
+    font-size:1rem;
+}
+button.buynow{
+    background-color:rgb(20, 255, 110);
+    transition:0.3s;
+}
+button.buynow:hover{
+    background-color: green;
+}
+button.addtocart{
+    background-color: orange;
+    transition:0.3s;
+}
+button.addtocart:hover{
+    background-color: orangered;
+}
+
+.img-pro{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.right-container{
+    flex-basis:50%;
+    height:600px;
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    justify-content:center;
+    padding:0 1.9rem;
+}
+.name{
+    color:rgb(220, 109, 170);
+}
+@media (max-width:800px){
+    .container{
+        flex-direction:column;
+        gap:5rem;
+        height:120vh;
+        
+        
+    }
+    footer{
+        display:block;
+    }
+    .right-container{
+        margin-bottom:3rem;
+    }
+    
+    .navbar{
+        display:none;
+    }
+    .hamburger-menu{
+        display:block;
+    }
+    #menu__toggle {
+        opacity: 0;
+     }
+    #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+    }
+    .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+    content: '';
+    top: -8px;
+    }
+    .menu__btn > span::after {
+    content: '';
+    top: 8px;
+    }
+    .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    }
+    .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+    }
+    .menu__item:hover {
+    background-color: #CFD8DC;
+    }
+    .hamburger-menu{
+        z-index:1;
+    }
+    .name{
+        margin-top:0;
+        padding:0;
+        margin-left:0;
+        position:relative;
+        bottom:10%;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <!--Navigation bar-->
+        <div class="container-1 header">
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+            
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="./Explore.html">Shop</a></li>
+                  
+                  <li><a class="menu__item" href="./index.html">Home</a></li>
+                  <li><a class="menu__item" href="./signin.html">Sign in</a></li>
+                  
+                </ul>
+              </div>
+            <div class="title">
+                <a href="./index.html"><div class="name"><h1>Eargasm.</h1></div></a>
+                    
+            </div>
+            <div class="navbar">
+                <div class="shop"><a href="./Explore.html"><h3>Shop</h3></a></div>                      
+                <div class="home"><a href="./index.html"><h3>Home</h3></a></div>
+                <div class="about"><a href="./signin.html"><h3>Sign in</h3></a></div>
+                
+            </div>
+        </div>
+            <div class="container">
+            <div class="left-container">
+                <h1>SkullCandy 4.3 wireless earbuds</h1>
+                <div class="img-pro">
+                    <img src="./assets/prd-img7.jpg">
+                </div>
+                <div class="buy">
+                    <a class="buy-link" href="./checkout.html" target="_blank"><button class="buynow">Buy Now</button></a>
+                    <button class="addtocart">Add To Cart</button>
+                    
+                </div>
+            </div>
+            <div class="right-container">
+                <div><h3>Bluetooth Connectivity</h3><p>Wireless earbuds use Bluetooth to connect to devices like smartphones or laptops. This eliminates cords for freedom of movement. Earbuds typically use Bluetooth 5.0+ for stable, low-latency connections.</p></div>
+                <hr>
+                    <div><h3>Compact and Lightweight</h3><p>Designed for comfort, wireless earbuds are lightweight and fit snugly. They come with different ear tips for a secure fit, enhancing comfort and noise isolation for clearer audio.</p></div>
+                    <hr>
+                    <div><h3>Touch Controls and Voice Assistants</h3><p>Earbuds often have touch controls or buttons for music playback, calls, and voice assistants. Users can play/pause, skip tracks, adjust volume, and use voice assistants like Siri or Google Assistant with a tap or swipe.</p></div>
+                    <hr>
+                    <div><h3>Active Noise Cancellation (ANC)</h3><p>Microphones counter ambient noise for immersive audio.</p></div>
+            </div>
+            
+        </div>
+        
+        </header>
+        <footer>
+            <div class="space"></div>
+        </footer>
+        <script src="./index2.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            
+            header{
+                width: 100vw;
+                min-height:100vh;
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                background-color:rgb(220, 109, 170);
+                /* height:100%;
+                width:80%; */
+                /* position:relative;
+                left:10%; */
+                
+            }
+            .container{
+                border-radius:0.4rem;
+                background-color:white;
+                max-width:800px;
+                min-height:600px;
+                display:flex;
+                justify-content:space-between;
+                align-items:flex-start;
+                padding:0.5rem 1.6rem;
+            }
+            .left-container{
+                padding:1rem;
+                flex-basis:50%;
+                display:flex;
+                
+                /* padding-left:1rem; */
+                justify-content: center;
+                align-items: center;
+                width:100%;
+                
+            }
+            .right-container{
+                padding:1rem;
+                padding-right:1.3rem;
+                flex-basis:50%;
+                display:flex;
+                
+                /* padding-left:1rem; */
+                justify-content: center;
+                align-items: center;
+                width:100%;
+            }
+            .name{
+                display: flex;
+            }
+            .address_one{
+                display: flex;
+            }
+            .address_two{
+                display: flex;
+            }
+            
+            
+            input[type="text"],input[type="number"]{
+                padding:0.5rem 0.7rem;
+                
+                width:100%;
+                margin:0.5rem ;
+            }
+            form{
+                padding:1rem;
+            }
+            select{
+                padding:0.5rem 0.7rem;
+                width:100%;
+                margin:0.5rem ;
+            }
+            h2{
+                margin:1rem 1rem;
+            }
+            p{
+                margin:0 1rem;
+            }
+            img{
+                margin:0 1rem 1rem 1rem;
+            }
+            input[type="submit"]{
+                width:100%;
+                padding:0.6rem;
+                padding:0.5rem 0.7rem;
+                margin:0.5rem ;
+                border:none;
+                font-size:1rem;
+                background-color:Black;
+                color:white;
+                transition:0.3s;
+                border-radius:0.2rem;
+            }
+            input[type="submit"]:hover{
+                background-color:green;
+                cursor:pointer;
+            }
+            @media only screen and (max-width:800px){
+                header{
+                    width:100%;
+                }
+                .container{
+                    flex-direction: column;
+                    border-radius:0;
+                    
+                }
+                
+                
+            }
+            
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+        <div class="left_container">
+            
+                <h2>Billing Details</h2>
+                <form>
+                
+                    <p>First Name</p>
+                    <input type="text" placeholder="first name">
+                
+                    <p>Last Name</p>
+                    <input type="text" placeholder="Last name">
+                    <p>Country</p>
+                <div class="country">
+                    <select name="country" id="country">
+                        <option value="India">Choose Country</option>
+                        <option value="India">Aland Islands</option>   
+                        <option value="India">Afghanisthan</option>   
+                        <option value="India">Albania</option>
+                        <option value="India">Algeria</option>
+                        <option value="India">American Samoa</option>
+                        <option value="India">Andorra</option>
+                        <option value="India">Angola</option>
+                        <option value="India">Anguilla</option>
+                        <option value="India">Antarctica</option>
+                        <option value="India">Antigua and Barbuda</option>
+                        <option value="India">Argentina</option>
+                        <option value="India">Armenia</option>
+                        <option value="India">Aruba</option>
+                        <option value="India">Australia</option>
+                        <option value="India">Azerbaizan</option>
+                        <option value="India">Bahamas</option>
+                        <option value="India">Bahrain</option>
+                        <option value="India">Bangladesh</option>
+                        <option value="India">Barbados</option>
+                        <option value="India">Belarus</option>
+                        <option value="India">Belau</option>
+                        <option value="India">Belgium</option>
+                        <option value="India">Belize</option>
+                        <option value="India">Benin</option>
+                        <option value="India">Bermuda</option>
+                        <option value="India">Bhutan</option>
+                        <option value="India">Bolivia</option>
+                        <option value="India">Bosnia</option>
+                        <option value="India">Botswana</option>
+                        <option value="India">Bouvet Island</option>
+                        <option value="India">Brazil</option>
+                        <option value="India">Brunei</option>
+                        <option value="India">Bulgaria</option>
+                        <option value="India">Bulkina Faso</option>
+                        <option value="India">Burundi</option>
+                        <option value="India">Cambodia</option>
+                        <option value="India">Cameroon</option>
+                        <option value="India">Canada</option>
+                        <option value="India">Cape Verde</option>
+                        <option value="India">Caymon Islands</option>
+                        <option value="India">Chad</option>
+                        <option value="India">Chile</option>
+                        <option value="India">China</option>
+                        <option value="India">Christmas Island</option>
+                        <option value="India">Colombia</option>
+                        <option value="India">Comoros</option>
+                        <option value="India">Congo</option>
+                        <option value="India">Cook</option>
+                        <option value="India">Costa Risa</option>
+                        <option value="India">Crotia</option>
+                        <option value="India">Cuba</option>
+                        <option value="India">Curacao</option>
+                        <option value="India">Cyprus</option>
+                        <option value="India">Czech Republic</option>
+                        <option value="India">Denmark</option>
+                        <option value="India">Djibuti</option>
+                        <option value="India">Ecuador</option>
+                        <option value="India">Egypt</option>
+                        <option value="India">El Salvador</option>
+                        <option value="India">Equatorial Guinea</option>
+                        <option value="India">Eritrea</option>
+                        <option value="India">Estonia</option>
+                        <option value="India">Eswatini</option>
+                        <option value="India">Ethiopia</option>
+                        <option value="India">Finland</option>
+                        <option value="India">Fiji</option>
+                        <option value="India">France</option>
+                        <option value="India">French Guiana</option>
+                        <option value="India">Gabon</option>
+                        <option value="India">Gambia</option>
+                        <option value="India">Georgia</option>
+                        <option value="India">Germany</option>
+                        <option value="India">Ghana</option>
+                        <option value="India">Gibraltar</option>
+                        <option value="India">Greece</option>
+                        <option value="India">Greenland</option>
+                        <option value="India">Grenada</option>
+                        <option value="India">Guadeloupe</option>
+                        <option value="India">Guam</option>
+                        <option value="India">Guatemala</option>
+                        <option value="India">Guarnesy</option>
+                        <option value="India">Guyana</option>
+                        <option value="India">Haiti</option>
+                        <option value="India">Honduras</option>
+                        <option value="India">Hong Kong</option>
+                        <option value="India">Hungary</option>
+                        <option value="India">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="India">Indonesia</option>
+                        <option value="India">Iran</option>
+                        <option value="India">Ireland</option>
+                        <option value="India">Iraq</option>
+                        <option value="India">Isle of Man</option>
+                        <option value="India">Israel</option>
+                        <option value="India">Italy</option>
+                        <option value="India">Ivory coast</option>
+                        <option value="India">Jamaica</option>
+                        <option value="India">Japan</option>
+                        <option value="India">Jersey</option>
+                        <option value="India">Jordon</option>
+                        <option value="India">Kazakhstan</option>
+                        <option value="India">Kenya</option>
+                        <option value="India">Kiribati</option>
+                        <option value="India">Kuwait</option>
+                        <option value="India">Laos</option>
+                        <option value="India">Latvia</option>
+                        <option value="India">Lebanon</option>
+                        <option value="India">Lesotho</option>
+                        <option value="India">Liberia</option>
+                        <option value="India">Libya</option>
+                        <option value="India">Liechtenstein</option>
+                        <option value="India">Lithuania</option>
+                        <option value="India">Luxembourg</option>
+                        <option value="India">Macao</option>
+                        <option value="India">Madagascar</option>
+                        <option value="India">Malawi</option>
+                        <option value="India">Malaysia</option>
+                        <option value="India">Mali</option>
+                        <option value="India">Malta</option>
+                        <option value="India">Marshall Islands</option>
+                        <option value="India">Martiunique</option>
+                        <option value="India">Martinique</option>
+                        <option value="India">Mauritania</option>
+                        <option value="India">Mauritius</option>
+                        <option value="India">Mayotte</option>
+                        <option value="India">Mexico</option>
+                        <option value="India">Micronesia</option>
+                        <option value="India">Moldova</option>
+                        <option value="India">Mongolia</option>
+                        <option value="India">Montenegro</option>
+                        <option value="India">Monteserrat</option>
+                        <option value="India">Morocco</option>
+                        <option value="India">Myanmar</option>
+                        <option value="India">Namibia</option>
+                        <option value="India">Nauru</option>
+                        <option value="India">Nepal</option>
+                        <option value="India">Netherlands</option>
+                        <option value="India">New Caledonia</option>
+                        <option value="India">New Zealand</option>
+                        <option value="India">Nicaragua</option>
+                        <option value="India">Niger</option>
+                        <option value="India">Nigeria</option>
+                        <option value="India">Niue</option>
+                        <option value="India">North Korea</option>
+                        <option value="India">North Macedonia</option>
+                        <option value="India">Norway</option>
+                        <option value="India">Oman</option>
+                        <option value="India">Pakistan</option>
+                        <option value="India">Palistinian Territory</option>
+                        <option value="India">Panama</option>
+                        <option value="India">Papua New Guinea</option>
+                        <option value="India">Paraguay</option>
+                        <option value="India">Peru</option>
+                        <option value="India">Philippines</option>
+                        <option value="India">Pitcairn</option>
+                        <option value="India">Poland</option>
+                        <option value="India">Portugal</option>
+                        <option value="India">Puerto Rico</option>
+                        <option value="India">Qatar</option>
+                        <option value="India">Reunion</option>
+                        <option value="India">Romania</option>
+                        <option value="India">Russia</option>
+                        <option value="India">Rawanda</option>
+                        <option value="India">Saint Bathelemy</option>
+                        <option value="India">Saint Helena</option>
+                        <option value="India">Saint Lucia</option>
+                        <option value="India">Saint Martin</option>
+                        <option value="India">Samoa</option>
+                        <option value="India">San Marino</option>
+                        <option value="India">Saudi Arabia</option>
+                        <option value="India">Senegal</option>
+                        <option value="India">Serbia</option>
+                        <option value="India">Sierra Leone</option>
+                        <option value="India">Singapore</option>
+                        <option value="India">Slovakia</option>
+                        <option value="India">Slovenia</option>
+                        <option value="India">Soloman Islands</option>
+                        <option value="India">Somalia</option>
+                        <option value="India">South Africa</option>
+                        <option value="India">South Korea</option>
+                        <option value="India">South Sudan</option>
+                        <option value="India">Spain</option>
+                        <option value="India">Sri Lanka</option>
+                        <option value="India">Sudan</option>
+                        <option value="India">Suriname</option>
+                        <option value="India">Sweden</option>
+                        <option value="India">Switzerland</option>
+                        <option value="India">Syria</option>
+                        <option value="India">Taiwan</option>
+                        <option value="India">Tajikistan</option>
+                        <option value="India">Tanzania</option>
+                        <option value="India">Thialand</option>
+                        <option value="India">Togo</option>
+                        <option value="India">Tokelau</option>
+                        <option value="India">Tonga</option>
+                        <option value="India">Turkey</option>
+                        <option value="India">Tuvalu</option>
+                        <option value="India">Uganda</option>
+                        <option value="India">Ukraine</option>
+                        <option value="India">United Arab Emirates</option>
+                        <option value="India">United Kingdom</option>
+                        <option value="India">United States</option>
+                        <option value="India">Uruguay</option>
+                        <option value="India">Uzbekistan</option>
+                        <option value="India">Vanuatu</option>
+                        <option value="India">Vetican</option>
+                        <option value="India">Venezuela</option>
+                        <option value="India">Vietnam</option>
+                        <option value="India">Virgin Islands</option>
+                        <option value="India">Western Sahara</option>
+                        <option value="India">Yemen</option>
+                        <option value="India">Zambia</option>
+                        <option value="India">Zimbabwe</option>
+                    </select>
+                </div>
+
+                        <p>Town</p>
+                        <input type="text" placeholder="Town/City">
+                        <p>State</p>
+                        <input type="text" placeholder="State">
+                        <p>Pin-code</p>
+                        <input type="number" placeholder="pin">
+                        <p>phone</p>
+                        <input type="text" placeholder="phone">
+                </form>
+            </div>
+        
+        <div class="right_container">
+
+            <h2>Payment</h2>
+                <form>
+                    <p>Accepted Cards</p>
+                        <div class="img-card">
+                            <img src="./assets/visa-logo-png-2026-1.png" height="30">
+                        </div>
+                        <p>Credit Card Number</p>
+                        <input type="text" name="paymentMethod" placeholder="Enter card number">
+                        <p>Exp Month</p>
+                        <input type="text" name="paymentMethod" placeholder="Enter month">
+                        <p>Exp Year</p>
+                        <input type="text" name="paymentMethod" placeholder="Enter year">
+                        <p>CVV</p>
+                        <input type="number" name="paymentMethod" placeholder="Enter your cvv">
+                        <input type="submit" value="Place Your Order">
+                    </form>
+                        
+                </div>
+        </div>
+    
+    </header>
+    <script src="./index1.js"></script>
+</body>
+</html>
