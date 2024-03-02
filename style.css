@@ -1,0 +1,285 @@
+
+body,html{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    background-color: #111;
+}
+
+.name{
+    color:rgb(220, 109, 170);
+    /* margin-left:10px; */
+
+}
+.nav-el{
+    transition: all 0.3s;
+}
+.container-1{
+    display:flex;
+    justify-content: space-between;
+    padding-left:10px;
+    padding-right:40px;
+    align-items: center;
+}
+.navbar{
+    display:flex;
+    gap:1.8rem;
+    justify-content: space-evenly;
+    color:white;
+    font-size:1rem;
+}
+.svglogo{
+    height:1.5rem;
+    width:1.5rem;
+
+}
+
+.main-btn{
+    transition: all 0.3s;
+    /* cursor: pointer; */
+}
+.container-2{
+    display:flex;
+    margin:0;
+    width:100%;
+    height:90vh;
+}
+img[alt="girl with headset"]{
+    opacity:0.2;
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+    object-fit:cover;
+}
+img[alt="headphone"]{
+    opacity:0.4;
+    height:100%;
+    width:100%;
+   padding:0;
+   margin:0;
+   object-fit:cover;
+}
+.header{
+    box-sizing: border-box;
+    position: fixed;
+    width: 100vw;
+    background-color: #111;
+    z-index: 1;
+    padding: 0 3rem;
+    padding-right: 3.2rem;
+    
+}
+.title-page{
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    
+}
+.slogan{
+    font-size:5rem;
+    color:white;
+    
+    
+    /* position:absolute; */
+     /* left:10%;
+    top:27%; */
+
+}
+.front-page{
+    position:relative;
+    margin-top: 4.93rem;
+}
+button.main-btn{
+    /* position:absolute; */
+    /* top:57%;
+     left:45%;  */
+     /* left:4%; */
+    padding-top:0;
+    
+    color:white;
+    background-color:black;
+    background-color: #111;
+    border:solid;
+    border-width:1px;
+    border-color:white;
+    width:10rem;
+    height:3.6rem;
+    font-size:1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color:rgb(220, 109, 170);
+
+    /* max-width:100%; */
+    /* justify-content:center; */
+    
+}
+button.main-btn:hover{
+    background-color: #ddd;
+    color:black;
+    /* color:rgb(220, 109, 170); */
+
+}
+.speciality{
+    margin:0;
+}
+img[alt="headphone2"]{
+    max-width:100%;
+    
+    opacity:0.4;
+}
+.container-3{
+    /* display:block; */
+     position:absolute;
+    top:20%;
+    left:10%;
+    
+    max-width:90%;
+    
+     
+    display:flex; 
+    flex-direction:column;
+    
+    justify-content: center; 
+    align-items:center;   
+}
+.girl{
+    width:70%;
+}
+.title-headphone{
+    width:30%;
+}
+h6{
+    margin:0;
+    padding:0;
+}
+h6{
+    color:white;
+    position:absolute;
+    left:43%;
+    top:9%;
+    max-width:100%;
+    font-size:0.8rem;
+}
+.title:hover{
+    cursor:pointer;
+}
+.shop:hover,.about:hover,.signin:hover{
+    cursor: pointer;
+    color:rgb(239, 161, 221);
+}
+.slogan2{
+    color:white;
+    position:absolute;
+    top:35%;
+    font-size:2rem;
+    left:10%;
+    width:85%;
+    text-align: center;
+}
+.speciality{
+    position:relative;
+}
+img[alt="headphone2"]{
+    height:100vh;
+    width:100%;
+    object-fit:cover;
+}
+img[alt="footer slogan"]{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:20vh;
+    object-fit:contain;
+
+}
+.footer{
+    position:relative;
+    margin:0;
+    padding:0;
+    /* background-color; */
+    
+}
+/* .slogan2{
+    position:absolute;
+    top:20%;
+} */
+.links-2{
+    display:flex;
+    flex-direction:column;
+    color:white;
+    grid-area:2/2/4/3;
+    font-size:1rem;
+    text-align:center;
+    list-style: none;
+    padding-top: 2.9rem;
+    line-height:1.5;
+}
+.flexbox-2{
+    display:flex;
+    flex-direction:column;
+    color:white;
+    grid-area:2/4/4/5;
+    font-size:1.5rem;
+    text-align:center;
+
+}
+.socials{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+}
+.flexbox-3{
+    padding-top: 6rem;
+    display:flex;
+    flex-direction:column;
+    color:white;
+    grid-area:2/6/4/7;
+    gap:10px;
+    text-align:center;
+    font-size:0.8rem;
+    line-height: 0.9;
+}
+.grid-container{
+    display:grid;
+    /* gap:30px; */
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+    grid-template-rows:  1fr 3fr 1fr;
+    position:absolute;
+    
+    height:70vh;
+    max-width:100%;
+    
+    
+}
+.hamburger-menu{
+    display:none;
+}
+a.foot{
+    color:white;
+    text-decoration: none;
+    font-size:0.7rem;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color:rgb(239, 161, 221);
+}
+.email{
+    width:100%;
+}
+.ad{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    top:80%
+}
+
