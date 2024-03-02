@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sign in</title>
+        <style>
+            html,body{
+                margin:0;
+                padding:0;
+                color:white;
+                background-color: black;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            span{
+                color:red;
+            }
+            button{
+                background-color:#56AEFF;
+                margin-top:10px;
+                border:none;
+                width:7rem;
+                font-size:1.3rem;
+                margin-bottom:2px;
+                padding:6px;
+            }
+            .forgot{
+                color:#56AEFF;
+            }
+            .container{
+                display:grid;
+                grid-template-columns: 4fr 4fr 2fr 4fr 1fr;
+                grid-template-rows: 1fr 4fr 1fr 1fr;
+                height:88vh;
+                font-size:1.2rem;
+            }
+            input{
+                height:2rem;
+                width:15rem;
+            }
+            .sign{
+                grid-area:1/3/2/4;
+            }
+            .flex-container-1{
+                grid-area:2/2/3/3;
+            }
+            .flex-container-2{
+                grid-area:2/4/3/5;
+            }
+            .sign{
+                position:relative;
+                right:40%
+            }
+            .hamburger-menu{
+                display:none;
+            }
+            .container-1{
+                display:flex;
+                justify-content: space-between;
+                padding-left:10px;
+                padding-right:40px;
+            }
+            .navbar{
+                display:flex;
+                gap:20px;
+                justify-content: space-evenly;
+                color:white;
+                font-size:0.9rem;
+            }
+            a{
+                text-decoration: none;
+                color:white;
+            }
+            a:hover{
+                color:rgb(239, 161, 221);
+            }
+            .shop:hover,.about:hover,.home:hover{
+                cursor: pointer;
+                color:rgb(239, 161, 221);
+            }
+            
+            @media(max-width:800px){
+                .navbar{
+                    display:none;
+                }
+                .container{   
+                    grid-template-columns: 1fr 5fr 1fr;
+                    grid-template-rows: 1fr 4fr 3fr;
+                    /* padding-bottom:100px; */
+                    font-size:1rem;
+                    width:100%;
+                }
+                .sign{
+                    grid-area:1/2/2/3;
+                    text-align:center;
+
+                }
+                .flex-container-1{
+                    grid-area: 2/2/3/3;
+                }
+                .flex-container-2{
+                    grid-area: 4/2/5/3;
+                    padding-bottom:100px;
+                }
+                .name{
+                    margin-top:0;
+                    padding:0;
+                    margin-left:0;
+                    position:relative;
+                    bottom:10%;
+                }
+                .hamburger-menu{
+                    display:block;
+                }
+                #menu__toggle {
+                    opacity: 0;
+                 }
+                #menu__toggle:checked + .menu__btn > span {
+                transform: rotate(45deg);
+                }
+                #menu__toggle:checked + .menu__btn > span::before {
+                top: 0;
+                transform: rotate(0deg);
+                }
+                #menu__toggle:checked + .menu__btn > span::after {
+                top: 0;
+                transform: rotate(90deg);
+                }
+                #menu__toggle:checked ~ .menu__box {
+                left: 0 !important;
+                }
+                .menu__btn {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                width: 26px;
+                height: 26px;
+                cursor: pointer;
+                z-index: 1;
+                }
+                .menu__btn > span,
+                .menu__btn > span::before,
+                .menu__btn > span::after {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #616161;
+                transition-duration: .25s;
+                }
+                .menu__btn > span::before {
+                content: '';
+                top: -8px;
+                }
+                .menu__btn > span::after {
+                content: '';
+                top: 8px;
+                }
+                .menu__box {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100%;
+                margin: 0;
+                padding: 80px 0;
+                list-style: none;
+                background-color: #ECEFF1;
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+                transition-duration: .25s;
+                }
+                .menu__item {
+                display: block;
+                padding: 12px 24px;
+                color: #333;
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                text-decoration: none;
+                transition-duration: .25s;
+                }
+                .menu__item:hover {
+                background-color: #CFD8DC;
+                }
+                .hamburger-menu{
+                    z-index:1;
+                }
+                .name{
+                    margin-top:0;
+                    padding:0;
+                    margin-left:0;
+                    position:relative;
+                    bottom:10%;
+                }
+                .ad{
+                    display:none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="container-1">
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+            
+                <ul class="menu__box">
+                  <li><a class="menu__item" href="#">Shop</a></li>
+                  <li><a class="menu__item" href="./about.html">About</a></li>
+                  <li><a class="menu__item" href="./index.html">Home</a></li>
+                  
+                </ul>
+              </div>
+            <div class="title">
+                <div class="name"><h1>Eargasm.</h1></div>
+                    
+            </div>
+            <div class="navbar">
+                <div class="shop"><h3>Shop</h3></div>
+                <div class="about"><a href="./about.html"><h3>About</h3></a></div>
+                <div class="home"><a href="./index.html"><h3>Home</h3></a></div>
+                
+            </div>
+        </div>
+            
+        
+        <div class="container">
+            <div class="sign"><h1>Sign in</h1></div>
+            <div class="flex-container-1">
+                <div class="login"><h1>Login</h1></div>
+                <div class="username"><h3>username<span>*</span></h3></div>
+                <div class="input1"><input></div>
+                <div class="password"><h3>password<span>*</span></h3></div>
+                <div class="input2"><input></div>
+                <div class="btn"><button class="login-btn">Login</button></div>
+                <div class="forgot">forgot password?</div>
+            </div>
+            <div class="flex-container-2">
+                <div class="register"><h1>Register</h1></div>
+                <div class="email"><h3>Enter your email</h3></div>
+                <div class="input3"><input></div>
+                <div class="btn"><button class="register-btn">Register</button></div>
+            </div>
+        </div>
+    </body>
+</html>

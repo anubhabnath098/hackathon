@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Eargasm</title>
+        <style>
+            body,html{
+                font-family:Arial, Helvetica, sans-serif;
+                margin:0;
+                padding:0;
+                background-color: black;
+            }
+            .name{
+                color:white;
+                margin-left:10px;
+
+            }
+            .container-1{
+                display:flex;
+                justify-content: space-between;
+                padding-left:10px;
+                padding-right:40px;
+            }
+            .navbar{
+                display:flex;
+                gap:20px;
+                justify-content: space-evenly;
+                color:white;
+                font-size:0.9rem;
+            }
+            .container-2{
+                display:flex;
+                margin:0;
+                width:100%;
+                height:90vh;
+            }
+            img[alt="girl with headset"]{
+                opacity:0.4;
+                height:100%;
+                width:100%;
+                padding:0;
+                margin:0;
+                object-fit:cover;
+            }
+            img[alt="headphone"]{
+                opacity:0.4;
+                height:100%;
+                width:100%;
+               padding:0;
+               margin:0;
+               object-fit:cover;
+            }
+            .title-page{
+                margin:0;
+                display:flex;
+                flex-direction: column;
+                position:relative;
+                
+            }
+            .slogan{
+                font-size:5rem;
+                color:white;
+                
+                
+                /* position:absolute; */
+                 /* left:10%;
+                top:27%; */
+
+            }
+            .front-page{
+                position:relative;
+            }
+            button.main-btn{
+                /* position:absolute; */
+                /* top:57%;
+                 left:45%;  */
+                 /* left:4%; */
+                padding-top:0;
+                
+                color:white;
+                background-color:black;
+                border:solid;
+                border-width:1px;
+                border-color:white;
+                width:10rem;
+                height:3.6rem;
+                font-size:1.2rem;
+                /* max-width:100%; */
+                /* justify-content:center; */
+                
+            }
+            button.main-btn:hover{
+                background-color: white;
+                color:black;
+            }
+            .speciality{
+                margin:0;
+            }
+            img[alt="headphone2"]{
+                max-width:100%;
+                
+                opacity:0.4;
+            }
+            .container-3{
+                /* display:block; */
+                 position:absolute;
+                top:20%;
+                left:10%;
+                
+                max-width:90%;
+                
+                 
+                display:flex; 
+                flex-direction:column;
+                
+                justify-content: center; 
+                align-items:center;   
+            }
+            .girl{
+                width:70%;
+            }
+            .title-headphone{
+                width:30%;
+            }
+            h4,h6{
+                margin:0;
+                padding:0;
+            }
+            h6{
+                color:white;
+                position:absolute;
+                left:43%;
+                top:9%;
+                max-width:100%;
+                font-size:0.8rem;
+            }
+            .title:hover{
+                cursor:pointer;
+            }
+            .shop:hover,.about:hover,.signin:hover{
+                cursor: pointer;
+                color:rgb(239, 161, 221);
+            }
+            .slogan2{
+                color:white;
+                position:absolute;
+                top:35%;
+                font-size:2rem;
+                left:10%;
+                width:85%;
+                text-align: center;
+            }
+            .speciality{
+                position:relative;
+            }
+            img[alt="headphone2"]{
+                height:100vh;
+                width:100%;
+                object-fit:cover;
+            }
+            img[alt="footer slogan"]{
+                margin:0;
+                padding:0;
+                width:100%;
+                height:20vh;
+                object-fit:contain;
+
+            }
+            .footer{
+                position:relative;
+                margin:0;
+                padding:0;
+                
+            }
+            .slogan2{
+                position:absolute;
+                top:20%;
+            }
+            .flexbox-1{
+                display:flex;
+                flex-direction:column;
+                color:white;
+                grid-area:3/2/4/3;
+                font-size:1.5rem;
+                text-align:center;
+            }
+            .flexbox-2{
+                display:flex;
+                flex-direction:column;
+                color:white;
+                grid-area:2/4/4/5;
+                font-size:1.5rem;
+                text-align:center;
+
+            }
+            .socials{
+                display:flex;
+                gap:10px;
+                justify-content:center;
+            }
+            .flexbox-3{
+                display:flex;
+                flex-direction:column;
+                color:white;
+                grid-area:3/6/4/7;
+                gap:10px;
+                text-align:center;
+            }
+            .grid-container{
+                display:grid;
+                /* gap:30px; */
+                grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+                grid-template-rows: 3fr 1fr 3fr 1fr;
+                position:absolute;
+                
+                height:70vh;
+                max-width:100%;
+                
+                
+            }
+            .hamburger-menu{
+                display:none;
+            }
+            a.foot{
+                color:white;
+                text-decoration: none;
+                font-size:0.7rem;
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+                color:white;
+            }
+            a:hover{
+                color:rgb(239, 161, 221);
+            }
+            .email{
+                width:100%;
+            }
+            .ad{
+                position:absolute;
+                width:100%;
+                text-align:center;
+                top:80%
+            }
+            @media (max-width:800px){
+                .flexbox-1{
+                    grid-area:2/2/3/3;
+                    justify-content: center;
+                    font-size:1rem;
+                }
+                .flexbox-2{
+                    grid-area:4/2/5/3;
+                    justify-content:center;
+                    font-size:1rem;
+                }
+                .flexbox-3{
+                    grid-area:6/2/7/3;
+                    justify-content: center;
+                    font-size:1rem;
+                }
+                .grid-container{
+                    grid-template-columns: 2fr 1fr 2fr;
+                    grid-template-rows:10fr 1.5fr 0.5fr 1.5fr 0.5fr 1.5fr 3fr;
+                    
+                }
+                .navbar{
+                    display:none;
+                }
+                .hamburger-menu{
+                    display:block;
+                }
+                .slogan{
+                    font-size:4rem;
+                }
+                .slogan2{
+                    font-size:2rem;
+                }
+                #menu__toggle {
+                    opacity: 0;
+                 }
+                #menu__toggle:checked + .menu__btn > span {
+                transform: rotate(45deg);
+                }
+                #menu__toggle:checked + .menu__btn > span::before {
+                top: 0;
+                transform: rotate(0deg);
+                }
+                #menu__toggle:checked + .menu__btn > span::after {
+                top: 0;
+                transform: rotate(90deg);
+                }
+                #menu__toggle:checked ~ .menu__box {
+                left: 0 !important;
+                }
+                .menu__btn {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                width: 26px;
+                height: 26px;
+                cursor: pointer;
+                z-index: 1;
+                }
+                .menu__btn > span,
+                .menu__btn > span::before,
+                .menu__btn > span::after {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #616161;
+                transition-duration: .25s;
+                }
+                .menu__btn > span::before {
+                content: '';
+                top: -8px;
+                }
+                .menu__btn > span::after {
+                content: '';
+                top: 8px;
+                }
+                .menu__box {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100%;
+                margin: 0;
+                padding: 80px 0;
+                list-style: none;
+                background-color: #ECEFF1;
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+                transition-duration: .25s;
+                }
+                .menu__item {
+                display: block;
+                padding: 12px 24px;
+                color: #333;
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                text-decoration: none;
+                transition-duration: .25s;
+                }
+                .menu__item:hover {
+                background-color: #CFD8DC;
+                }
+                .hamburger-menu{
+                    z-index:1;
+                }
+                .name{
+                    margin-top:0;
+                    padding:0;
+                    margin-left:0;
+                    position:relative;
+                    bottom:10%;
+                }
+                
+                button.main-btn{
+                    width:5rem;
+                    font-size:0.8rem;
+                    border-radius:10px;
+                }
+                .ad{
+                    display:none;
+                }
+                
+
+
+            }
+            @media (max-width:280px){
+                .slogan{
+                    font-size:3rem;
+                }
+                .slogan2{
+                    font-size:1rem;
+                }
+            }
+            
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="title-page">
+            <div class="head"></div>
+        <div class="container-1">
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+            
+                <ul class="menu__box">
+                  <li><a class="menu__item" href="#">Shop</a></li>
+                  <li><a class="menu__item" href="./about.html">About</a></li>
+                  <li><a class="menu__item" href="./signin.html">Sign in</a></li>
+                </ul>
+              </div>
+            <div class="title">
+                <div class="name"><h1>Eargasm.</h1></div>
+                    
+            </div>
+            <div class="navbar">
+                <div class="shop"><h3>Shop</h3></div>
+                <div class="about"><a href="./about.html"><h3>About</h3></a></div>
+                <div class="signin"><a href="./signin.html"><h3>Sign in</h3></a></div>
+            </div>
+        </div>
+            <div class="ad">
+                <h6>Free shipping on orders above $50</h6>
+            </div>
+        </div>
+        
+        <div class="front-page">
+            <div class="container-2">
+                <div class="girl"><img src="./assets/title.avif" alt="girl with headset"></div>
+                <div class="title-headphone"><img src="./assets/headphone1.avif" alt="headphone"></div>
+            </div>
+            <div class="container-3">
+                <div><h1 class="slogan">Listen to more than just music...</h1></div>
+                <div><button class="main-btn"><h4>Explore</h4></button></div>
+            </div>
+        </div>
+        <div class="speciality"><img src="./assets/headphone2.jpg" alt="headphone2">
+        <div class="slogan2"><h1>Find over 50+ variety of headsets on our platform</h1>
+        </div></div>
+        <div class="footer">
+        <div class="slogan2"><img src="./assets/slogan.png" alt="footer slogan"></div>
+        <div class="grid-container">
+            <div class="flexbox-1">
+                <div class="email"><h3>Drop your email</h3></div>
+                <div class="input"><input class="email"></div>
+            </div>
+            <div class="flexbox-2">
+                <div class="follow"><h3>Follow me on socials</h3></div>
+                <div class="socials">
+                    <div><a href="https://www.instagram.com/anubhab098/" target="_blank" class="foot">instagram</a></div>
+                    <div><a href="..." class="foot">facebook</a></div>
+                    <div><a href="..." class="foot">linkedIn</a></div>
+                    <div><a href="https://github.com/anubhabnath098" target="_blank" class="foot">github</a></div>
+                </div>
+                <div class="contact"><h3>Contact me</h3></div>
+                <div class="emailadd"><h4>anubhabnath04@gmail.com</h4></div>
+            </div>
+            <div class="flexbox-3">
+                <div class="customer-care">Customer Care</div>
+                <div class="mobile">+91 1234567890</div>
+                <div class="days">Mon-Fri</div>
+                <div class="time">9 a.m - 4 p.m</div>
+            </div>
+        </div>
+     </div>
+
+
+    </body>
+</html>

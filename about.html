@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>About</title>
+        <style>
+            html,body{
+                margin:0;
+                padding:0;
+                background-color: black;
+                color:white;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            .container-2{
+                display:flex;
+                margin:0;
+                width:100%;
+                height:90vh;
+            }
+            img[alt="girl2"]{
+                opacity:0.4;
+                height:100%;
+                width:100%;
+                padding:0;
+                margin:0;
+                object-fit:cover;
+            }
+            img[alt="headset"]{
+                opacity:0.32;
+                height:100%;
+                width:100%;
+               padding:0;
+               margin:0;
+               object-fit:cover;
+            }
+            .hamburger-menu{
+                display:none;
+            }
+            .container-1{
+                display:flex;
+                justify-content: space-between;
+                padding-left:10px;
+                padding-right:40px;
+            }
+            .navbar{
+                display:flex;
+                gap:20px;
+                justify-content: space-evenly;
+                color:white;
+                font-size:0.9rem;
+            }
+            
+            .flexbox-3{
+                display:flex;
+                flex-direction:column;
+                color:white;
+                grid-area:3/6/4/7;
+                gap:10px;
+                text-align:center;
+            }
+            .grid-container{
+                display:grid;
+                /* gap:30px; */
+                grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+                grid-template-rows: 3fr 1fr 3fr 1fr;
+                position:absolute;
+                height:70vh;
+                max-width:100%;
+                
+                
+            }
+            .flexbox-1{
+                display:flex;
+                flex-direction:column;
+                color:white;
+                grid-area:3/2/4/3;
+                font-size:1.5rem;
+                text-align:center;
+            }
+            .flexbox-2{
+                display:flex;
+                flex-direction:column;
+                color:white;
+                grid-area:2/4/4/5;
+                font-size:1.5rem;
+                text-align:center;
+
+            }
+            .footer{
+                position:relative;
+                margin:0;
+                padding:0;
+                
+            }
+            img[alt="footer slogan"]{
+                margin:0;
+                padding:0;
+                width:100%;
+                height:20vh;
+                object-fit:contain;
+
+            }
+            .socials{
+                display:flex;
+                gap:10px;
+                justify-content:center;
+            }
+            a.foot{
+                color:white;
+                text-decoration: none;
+                font-size:0.7rem;
+                text-align: center;
+            }
+            
+            .slogan2{
+                color:white;
+                position:absolute;
+                top:35%;
+                font-size:2rem;
+                left:10%;
+                width:85%;
+                text-align: center;
+            }
+            .slogan2{
+                position:absolute;
+                top:20%;
+            }
+            a{
+                text-decoration: none;
+                color:white;
+            }
+            a:hover{
+                color:rgb(239, 161, 221);
+            }
+            .email{
+                width:100%;
+            }
+            h1{
+                text-align:center;
+            }
+            .main-content{
+                position:absolute;
+                left:10%;
+                top:10%;
+                max-width:80%;
+                justify-content:center;
+                font-size:1.5rem;
+            }
+            p{
+                text-align:center;
+            }
+            .body-part{
+                width:100%;
+                position:relative;
+            }
+            .container-2{
+                width:100%;
+            }
+            .img1,.img2{
+                width:100%;
+            }
+            @media(max-width:800px){
+                .flexbox-1{
+                    grid-area:2/2/3/3;
+                    justify-content: center;
+                    font-size:1rem;
+                }
+                .flexbox-2{
+                    grid-area:4/2/5/3;
+                    justify-content:center;
+                    font-size:1rem;
+                }
+                .flexbox-3{
+                    grid-area:6/2/7/3;
+                    justify-content: center;
+                    font-size:1rem;
+                }
+                .grid-container{
+                    grid-template-columns: 2fr 1fr 2fr;
+                    grid-template-rows:10fr 1.5fr 0.5fr 1.5fr 0.5fr 1.5fr 3fr;
+                    
+                }
+
+                .navbar{
+                    display:none;
+                }
+                
+                .flex-container-1{
+                    grid-area: 2/2/3/3;
+                }
+                .flex-container-2{
+                    grid-area: 4/2/5/3;
+                    padding-bottom:100px;
+                }
+                .name{
+                    margin-top:0;
+                    padding:0;
+                    margin-left:0;
+                    position:relative;
+                    bottom:10%;
+                }
+                .hamburger-menu{
+                    display:block;
+                }
+                #menu__toggle {
+                    opacity: 0;
+                 }
+                #menu__toggle:checked + .menu__btn > span {
+                transform: rotate(45deg);
+                }
+                #menu__toggle:checked + .menu__btn > span::before {
+                top: 0;
+                transform: rotate(0deg);
+                }
+                #menu__toggle:checked + .menu__btn > span::after {
+                top: 0;
+                transform: rotate(90deg);
+                }
+                #menu__toggle:checked ~ .menu__box {
+                left: 0 !important;
+                }
+                .menu__btn {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                width: 26px;
+                height: 26px;
+                cursor: pointer;
+                z-index: 1;
+                }
+                .menu__btn > span,
+                .menu__btn > span::before,
+                .menu__btn > span::after {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #616161;
+                transition-duration: .25s;
+                }
+                .menu__btn > span::before {
+                content: '';
+                top: -8px;
+                }
+                .menu__btn > span::after {
+                content: '';
+                top: 8px;
+                }
+                .menu__box {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100%;
+                margin: 0;
+                padding: 80px 0;
+                list-style: none;
+                background-color: #ECEFF1;
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+                transition-duration: .25s;
+                }
+                .menu__item {
+                display: block;
+                padding: 12px 24px;
+                color: #333;
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                text-decoration: none;
+                transition-duration: .25s;
+                }
+                .menu__item:hover {
+                background-color: #CFD8DC;
+                }
+                .hamburger-menu{
+                    z-index:1;
+                }
+                .name{
+                    margin-top:0;
+                    padding:0;
+                    margin-left:0;
+                    position:relative;
+                    bottom:10%;
+                }
+                .main-content{
+                    font-size:1rem;
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <!--Navigation bar-->
+        <div class="container-1">
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+            
+                <ul class="menu__box">
+                  <li><a class="menu__item" href="#">Shop</a></li>
+                  
+                  <li><a class="menu__item" href="./index.html">Home</a></li>
+                  <li><a class="menu__item" href="./signin.html">Sign in</a></li>
+                  
+                </ul>
+              </div>
+            <div class="title">
+                <div class="name"><h1>Eargasm.</h1></div>
+                    
+            </div>
+            <div class="navbar">
+                <div class="shop"><a href="..."><h3>Shop</h3></a></div>                
+                <div class="home"><a href="./index.html"><h3>Home</h3></a></div>
+                <div class="about"><a href="./signin.html"><h3>Sign in</h3></a></div>
+                
+            </div>
+        </div>
+        <div class="body-part">
+        <div class="container-2">
+            <div class="img1"><img src="./assets/details4.jpg" alt="girl2"></div>
+            <div class="img2"><img src="./assets/pexels-cottonbro-studio-3945667.jpg" alt="headset"></div>
+            
+        </div>
+        <div class="main-content"><h1>About our Venture</h1>
+            <p>Welcome to Eargasm - Your Sonic Haven!
+                At Eargasm, we believe that music is more than just sound; it's an experience, an emotion, and a journey. Our passion for delivering unparalleled audio experiences led us to create a unique space where music enthusiasts and audiophiles alike can find their perfect harmony.</p>
+                <p>Eargasm was born from the idea that everyone deserves exceptional audio quality. Our mission is to empower individuals to immerse themselves in the world of extraordinary sound, whether they're a casual listener, a professional musician, or someone who simply appreciates the magic of music.</p>
+        </div>
+    </div>
+
+        <div class="footer">
+            <div class="slogan2"><img src="./assets/slogan.png" alt="footer slogan"></div>
+            <div class="grid-container">
+                <div class="flexbox-1">
+                    <div class="email"><h3>Drop your email</h3></div>
+                    <div class="input"><input class="email"></div>
+                </div>
+                <div class="flexbox-2">
+                    <div class="follow"><h3>Follow me on socials</h3></div>
+                    <div class="socials">
+                        <div><a href="https://www.instagram.com/anubhab098/" target="_blank" class="foot">instagram</a></div>
+                        <div><a href="..." class="foot">facebook</a></div>
+                        <div><a href="..." class="foot">linkedIn</a></div>
+                        <div><a href="https://github.com/anubhabnath098" target="_blank" class="foot">github</a></div>
+                    </div>
+                    <div class="contact"><h3>Contact me</h3></div>
+                    <div class="emailadd"><h4>anubhabnath04@gmail.com</h4></div>
+                </div>
+                <div class="flexbox-3">
+                    <div class="customer-care">Customer Care</div>
+                    <div class="mobile">+91 1234567890</div>
+                    <div class="days">Mon-Fri</div>
+                    <div class="time">9 a.m - 4 p.m</div>
+                </div>
+            </div>
+         </div>
+    </body>
+</html>
