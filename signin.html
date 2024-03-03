@@ -16,6 +16,7 @@
             span{
                 color:red;
             }
+            
             button{
                 background-color:#56AEFF;
                 margin-top:10px;
@@ -27,6 +28,7 @@
             }
             .forgot{
                 color:#56AEFF;
+                font-size: 1rem;
             }
             .container{
                 display:grid;
@@ -48,9 +50,28 @@
             .flex-container-2{
                 grid-area:2/4/3/5;
             }
+            .title h1{
+                color: rgb(220, 109, 170);
+            }
+            .navbar h3{
+                font-size: 1.4rem;
+            }
             .sign{
                 position:relative;
-                right:40%
+                right:40%;
+                color: rgb(220, 109, 170);
+            }
+            .username {
+                padding-top: 10px;
+            }
+            .password {
+                padding-top: 35px;
+            }
+            .btn{
+                padding: 20px 0 20px 0 ;
+            }
+            .email{
+                padding-top: 10px;
             }
             .hamburger-menu{
                 display:none;
@@ -68,6 +89,12 @@
                 color:white;
                 font-size:0.9rem;
             }
+            
+            input::placeholder {
+            padding-left: 10px;
+            font-size: 15px;
+            }
+
             a{
                 text-decoration: none;
                 color:white;
@@ -197,6 +224,15 @@
                 .ad{
                     display:none;
                 }
+                .username {
+                padding-top: 0;
+                }
+                .password {
+                padding-top: 0;
+                }
+                .email{
+                padding-top:0;
+                }
             }
         </style>
     </head>
@@ -234,16 +270,16 @@
             <div class="flex-container-1">
                 <div class="login"><h1>Login</h1></div>
                 <div class="username"><h3>username<span>*</span></h3></div>
-                <div class="input1"><input></div>
+                <div class="input1"><input placeholder="Enter username..."></div>
                 <div class="password"><h3>password<span>*</span></h3></div>
-                <div class="input2"><input></div>
+                <div class="input2"><input placeholder="Enter password..."></div>
                 <div class="btn"><button class="login-btn">Login</button></div>
                 <div class="forgot">forgot password?</div>
             </div>
             <div class="flex-container-2">
                 <div class="register"><h1>Register</h1></div>
                 <div class="email"><h3>Enter your email</h3></div>
-                <div class="input3"><input></div>
+                <div class="input3"><input placeholder="Enter E-mail..."></div>
                 <div class="btn"><button class="register-btn">Register</button></div>
             </div>
         </div>
