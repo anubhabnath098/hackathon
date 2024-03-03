@@ -27,7 +27,7 @@ html,body{
     z-index: 1;
     padding: 0 3rem;
     padding-right: 3.2rem;
-    align-items:center;
+    align-items: center;
     
 }
 img[alt="girl2"]{
@@ -54,6 +54,7 @@ img[alt="headset"]{
     justify-content: space-between;
     padding-left:10px;
     padding-right:40px;
+    
 }
 .navbar{
     display:flex;
