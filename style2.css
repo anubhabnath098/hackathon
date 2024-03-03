@@ -164,6 +164,12 @@ h1{
     justify-content:center;
     font-size:1.5rem;
 }
+.neon{
+    height:10rem;
+    width:9rem;
+    grid-area:2/2/3/3;
+    align-self:center;
+}
 p{
     text-align:center;
 }
@@ -299,6 +305,9 @@ p{
     }
     .hamburger-menu{
         z-index:1;
+    }
+    .neon{
+        margin-left:2.5rem;
     }
     .name{
         margin-top:0;
