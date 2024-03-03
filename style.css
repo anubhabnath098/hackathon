@@ -133,6 +133,12 @@ img[alt="headphone2"]{
     
     opacity:0.4;
 }
+.neon{
+    height:10rem;
+    width:9rem;
+    grid-area:2/2/3/3;
+    align-self:center;
+}
 .container-3{
     /* display:block; */
      position:absolute;
