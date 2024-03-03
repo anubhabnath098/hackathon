@@ -1,9 +1,9 @@
-
 'use strict';
 
 const filtersArr = document.querySelectorAll('.filter');
 const filters = document.querySelector('.filters');
 const allPrd = document.querySelectorAll('.col');
+
 
 function displayNone(allPrd) {
     allPrd.forEach(el => {
@@ -11,23 +11,28 @@ function displayNone(allPrd) {
     })
 }
 
-function display(allprd, cl) {
+function display(allPrd, checkArr) {
     allPrd.forEach(el => {
-        if (el.classList.contains(cl))
+        const productClasses = el.classList;
+        if (checkArr.every(cls => productClasses.contains(cls))) {
             el.classList.remove('none');
-    })
-
+        }
+    });
 }
+
 
 filters.addEventListener('click', function (e) {
 
     if (e.target.tagName === 'INPUT') {
+        const checkArr = [];
         filtersArr.forEach(el => {
-            el.checked = false;
+            if (el.checked) {
+                checkArr.push(el.getAttribute("data-info"));
+            }
         });
-        e.target.checked = true;
+        console.log(checkArr);
         displayNone(allPrd);
-        display(allPrd, e.target.getAttribute("data-info"));
+        display(allPrd, checkArr);
     }
 
 });
